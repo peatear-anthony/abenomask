@@ -34,6 +34,7 @@ if __name__ ==  '__main__':
             first_name=row['first_name'],
             last_name=row['last_name'],
             postal_code=row['postal_code'],
+            prefecture =row['prefecture'],
             my_number=row['my_number'],
             email=row['email'],
             password=row['password'],

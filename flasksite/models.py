@@ -14,6 +14,7 @@ class User(db.Model, UserMixin):
     first_name = db.Column(db.String(50), unique=False, nullable=False)
     last_name = db.Column(db.String(50), unique=False, nullable=False)
     postal_code = db.Column(db.Integer, unique=False, nullable=False)
+    prefecture = db.Column(db.String(120), unique=False, nullable=False, default='Tokyo')
     my_number = db.Column(db.Integer, unique=False, nullable=False)
 
     email = db.Column(db.String(120), unique=False, nullable=False)
