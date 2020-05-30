@@ -40,12 +40,12 @@ class Park(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
     prefecture = db.Column(db.String(100), unique=True, nullable=False)
-    Area  = db.Column(db.Float, nullable=False)
-    Lat = db.Column(db.Float, nullable=False)
-    Long = db.Column(db.Float, nullable=False)
-    capacity = db.Column(db.Integer, nullable=False)
-    present = db.Column(db.Integer, nullable=False, default=0)
-    people = db.relationship('User', backref='people', lazy=True)
+    area  = db.Column(db.Float, nullable=False)
+    lat = db.Column(db.Float, nullable=False)
+    lon = db.Column(db.Float, nullable=False)
+    capacity = db.Column(db.Integer, nullable=False, default=0)
+    count = db.Column(db.Integer, nullable=False, default=0)
+    people = db.relationship('User', backref='location', lazy=True)
 
     def __repr__(self):
         return f"Post('{self.name}', '{self.prefecture}', '{self.area}', {self.lat}', '{self.long}', '{self.capacity}', '{self.present}')"
