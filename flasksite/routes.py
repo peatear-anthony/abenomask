@@ -16,6 +16,28 @@ def home():
     posts = Post.query.order_by(Post.date_posted.desc()).paginate(per_page=2, page=page)
     return render_template('home.html', posts=posts)
 
+@app.route("/mainpage")
+@login_required
+def mainpage():
+    # Get User and Park Info
+    user = User.query.filter_by(username=current_user.username).first_or_404()
+    parks = Park.query\
+        .filter_by(prefecture=current_user.prefecture)\
+        .order_by(Post.count.desc()).paginate(per_page=5)
+
+    return render_template('mainpage.html', parks=parks)
+
+
+    '''
+    # Get first user or retrun a 404 error if None
+    user = User.query.filter_by(username=username).first_or_404()
+
+    posts = Post.query.filter_by(author=user)\
+        .order_by(Post.date_posted.desc())\
+        .paginate(per_page=2, page=page)
+    '''
+
+
 
 @app.route("/about")
 def about():
@@ -37,7 +59,7 @@ def register():
             last_name=form.last_name.data,
             postal_code=form.postal_code.data,
             my_number=form.my_number.data,
-            password=hashed_password,
+            password=form.password.data,
             email=form.email.data)
         # Add to DB
         #user = User(username=form.username.data, email=form.email.data, password=hashed_password)
@@ -56,12 +78,12 @@ def login():
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(email=form.email.data).first()
-        if user and bcrypt.check_password_hash(user.password, form.password.data):
+        if user and (user.password == form.password.data):
             # Log-in the user
             login_user(user, remember=form.remember.data)
             next_page = request.args.get('next')
             #flash('You have been logged in!', 'success')
-            return redirect(url_for(next_page[1:])) if next_page else redirect(url_for('home'))
+            return redirect(url_for(next_page[1:])) if next_page else redirect(url_for('mainpage'))
 
         else:
             flash('Login Unsuccessful. Please check email and password', 'danger')
