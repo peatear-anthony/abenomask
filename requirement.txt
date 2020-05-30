@@ -1,6 +1,7 @@
 flask
 flask-wtf
 flask-sqlalchemy
+DateTime
 email_validator
 pandas
 numpy
