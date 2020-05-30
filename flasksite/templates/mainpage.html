@@ -1,8 +1,9 @@
 {% extends "layout.html" %}
 {% block content %}
+    {{ user.prefecture}}
     {% for park in parks.items %}
-        <h1>{ {park.name }}</h1>>
-        <p>{ {park.prefecture }}</p>>
-        <p>{{park.count}}  {{park.capacity}}</p>>
+        <h1>{{ park.name }}</h1>>
+        <p>{{ park.prefecture }}</p>>
+        <p>{{ park.count }}  {{ park.capacity }}</p>>
     {% endfor %}
 {% endblock content %}

@@ -2,4 +2,4 @@ username,first_name,last_name,prefecture,postal_code,my_number,email,password
 takapon,Takashi,Yamada,Tokyo,1006021,1.93E+11,aho@gmail.com,takashi123
 chanmina,Mina,Kawakami,Tokyo,1340013,1.90E+11,opi@gmail.com,chanmina890
 sunga001,peter,sunga,Hokkaido,1120023,1.90E+11,peter@live.com,password
-yuta,Yuta,Shimoda,hokkaido,1120024,1.90E+11,yuta@live.com,password
+yuta,Yuta,Shimoda,Hokkaido,1120024,1.90E+11,yuta@live.com,password
