@@ -1,6 +1,7 @@
 flask
 flask-wtf
 flask-sqlalchemy
+flask-bcrypt
 DateTime
 email_validator
 pandas

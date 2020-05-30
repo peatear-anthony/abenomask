@@ -13,11 +13,11 @@ class RegistrationForm(FlaskForm):
     last_name = StringField('Last Name',
                             validators=[DataRequired()])
 
-    postal_code = StringField('Postcode',
+    postal_code = StringField('Postal Code',
                             validators=[DataRequired()])
 
     my_number = StringField('My Number',
-                            validators=[DataRequired(), Length(min=12, max=12)])
+                            validators=[Length(min=1, max=12)])
 
     email = StringField('Email',
                         validators=[DataRequired(), Email()])
