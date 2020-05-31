@@ -25,10 +25,11 @@
               {% else %}
                 <p style="color:green">{{ park.count }} / {{ park.capacity }}  </p>
               {% endif %}
-              <a class="btn btn-primary" href="#">Make Reservation</a>
+              <a class="btn btn-primary" href="{{ url_for('make_reservation', park_id=park.id) }}" }>Make Reservation</a>
             </div>
           </div>
           <!-- /.row -->
           <hr>
     {% endfor %}
 {% endblock content %}
+

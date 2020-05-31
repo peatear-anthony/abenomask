@@ -3,8 +3,8 @@ import secrets
 from PIL import Image
 from flask import render_template, url_for, flash, redirect, request, abort
 from flasksite import app, db, bcrypt
-from flasksite.forms import RegistrationForm, LoginForm, UpdateAccountForm, PostForm
-from flasksite.models import User, Post, Park
+from flasksite.forms import RegistrationForm, LoginForm, UpdateAccountForm, PostForm, MakeReservationForm
+from flasksite.models import User, Post, Park, Reservation
 from flask_login import login_user, current_user, logout_user, login_required
 
 
@@ -38,6 +38,49 @@ def my_reservations():
         .order_by(Park.count.desc()).paginate(per_page=5)
 
     return render_template('my_reservations.html', parks=parks, user=user)
+
+
+@app.route("/make_reservation/<int:park_id>", methods=['GET', 'POST'])
+@login_required
+def make_reservation(park_id):
+
+    return render_template('my_reservations.html', parks=parks, user=user)
+'''
+@app.route("/make_reservation/<int:park_id>", methods=['GET', 'POST'])
+@login_required
+def make_reservation(park_id, user_id):
+    form = MakeReservationForm()
+
+    if form.validate_on_submit():
+
+    elif request.method == 'GET':
+        form.date.data = 
+        form.start_time.data = 
+        form.end_time.data = 
+
+        form.username.data = current_user.username
+        form.email.data = current_user.email
+        form.first_name.data = current_user.first_name
+
+@app.route("/post/new", methods=['GET', 'POST'])
+@login_required
+def new_post():
+    form = PostForm()
+    if form.validate_on_submit():
+        post = Post(title=form.title.data, content=form.content.data, author=current_user)
+        db.session.add(post)
+        db.session.commit()
+        flash('Your post has been created!', 'success')
+        return redirect(url_for('home'))
+    return render_template('create_post.html', 
+        title='New Post', form = form, legend="New Post")
+
+@app.route("/post/<int:post_id>")
+def post(post_id):
+    # get the id or give me a 404 if it doesn't exisit
+    post = Post.query.get_or_404(post_id)
+    return render_template('post.html', title=post.title, post=post)
+'''
 
 
 @app.route("/about")

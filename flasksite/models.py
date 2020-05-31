@@ -23,6 +23,7 @@ class User(db.Model, UserMixin):
 
     location_id = db.Column(db.Integer, db.ForeignKey('park.id'),unique=False, nullable=True, default=0)
     posts = db.relationship('Post', backref='author', lazy=True)
+    reservations = db.relationship('Reservation', backref='author', lazy=True)
 
     def __repr__(self):
         return f"User('{self.username}', '{self.email}', '{self.image_file}')"
@@ -47,6 +48,17 @@ class Park(db.Model):
     capacity = db.Column(db.Integer, nullable=False, default=0)
     count = db.Column(db.Integer, nullable=False, default=0)
     people = db.relationship('User', backref='location', lazy=True)
+    reservations = db.relationship('Reservation', backref='place', lazy=True)
 
     def __repr__(self):
         return f"Post('{self.name}', '{self.prefecture}', '{self.area}', {self.lat}', '{self.lon}', '{self.capacity}', '{self.present}')"
+
+class Reservation(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    date_created = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    park_id = db.Column(db.Integer, db.ForeignKey('park.id'), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    active = db.Column(db.Boolean, nullable=False, default=False)
+
+    def __repr__(self):
+        return f"Reservation('{self.date_created}', '{self.park_id}' ,'{self.user_id}')"
