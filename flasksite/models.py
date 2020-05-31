@@ -23,7 +23,7 @@ class User(db.Model, UserMixin):
 
     location_id = db.Column(db.Integer, db.ForeignKey('park.id'),unique=False, nullable=True, default=0)
     posts = db.relationship('Post', backref='author', lazy=True)
-    reservations = db.relationship('Reservation', backref='author', lazy=True)
+    reservations = db.relationship('Reservation', backref='creator', lazy=True)
 
     def __repr__(self):
         return f"User('{self.username}', '{self.email}', '{self.image_file}')"
@@ -56,6 +56,9 @@ class Park(db.Model):
 class Reservation(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     date_created = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    start_time=db.Column(db.String, nullable=False, default="10:00")
+    end_time=db.Column(db.String, nullable=False, default="14:00")
     park_id = db.Column(db.Integer, db.ForeignKey('park.id'), nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     active = db.Column(db.Boolean, nullable=False, default=False)

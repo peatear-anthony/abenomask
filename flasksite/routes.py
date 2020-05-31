@@ -1,5 +1,6 @@
 import os
 import secrets
+from datetime import datetime, date
 from PIL import Image
 from flask import render_template, url_for, flash, redirect, request, abort
 from flasksite import app, db, bcrypt
@@ -40,28 +41,36 @@ def my_reservations():
     return render_template('my_reservations.html', parks=parks, user=user)
 
 
+
+
 @app.route("/make_reservation/<int:park_id>", methods=['GET', 'POST'])
 @login_required
 def make_reservation(park_id):
-
-    return render_template('my_reservations.html', parks=parks, user=user)
-'''
-@app.route("/make_reservation/<int:park_id>", methods=['GET', 'POST'])
-@login_required
-def make_reservation(park_id, user_id):
     form = MakeReservationForm()
+    park =  Park.query.filter_by(id=park_id).first_or_404()
 
     if form.validate_on_submit():
+        # create new reservation
+        reservation = Reservation(
+        date=form.date.data,
+        start_time=form.start_time.data,
+        end_time=form.start_time.data,
+        creator=current_user,
+        place=park)
 
+        db.session.add(reservation)
+        db.session.commit()
+        flash('Your reservation has been made!', 'success')
+        return redirect(url_for('mainpage'))
     elif request.method == 'GET':
-        form.date.data = 
-        form.start_time.data = 
-        form.end_time.data = 
+        form.date.data = date.today()
+        form.start_time.data = "1:00"
+        form.end_time.data = "3:30"
 
-        form.username.data = current_user.username
-        form.email.data = current_user.email
-        form.first_name.data = current_user.first_name
+    return render_template('make_reservation.html', 
+        title='Reservation', form = form, park=park)
 
+'''
 @app.route("/post/new", methods=['GET', 'POST'])
 @login_required
 def new_post():
