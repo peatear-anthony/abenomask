@@ -56,6 +56,7 @@ def make_reservation(park_id):
         start_time=form.start_time.data,
         end_time=form.start_time.data,
         creator=current_user,
+        active=True,
         place=park)
 
         db.session.add(reservation)

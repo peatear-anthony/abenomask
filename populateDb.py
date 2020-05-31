@@ -21,7 +21,7 @@ if __name__ ==  '__main__':
             lat=row['lat'],
             lon=row['lon'],
             capacity=row['capacity'],
-            count = randrange(5)
+            count = randrange(10000)
             )
         db.session.add(park)
         db.session.commit()
