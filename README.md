@@ -14,14 +14,7 @@
 
 
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
+
 
 
 <!-- PROJECT LOGO -->
@@ -31,23 +24,14 @@
     <img src="images/logo.PNG" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">YOUR_TITLE</h3>
+  <h3 align="center">GoNoKami</h3>
 
   <p align="center">
-    YOUR_SHORT_DESCRIPTION
+    App created for the Covid-19-SpaceApps Competition. 
     <br />
-    <a href="https://github.com/github_username/repo"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/github_username/repo">View Demo</a>
-    ·
-    <a href="https://github.com/github_username/repo/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo/issues">Request Feature</a>
+    <a href="https://covid19.spaceappschallenge.org/challenges/covid-challenges/isolation-solution/teams/abenomask/project"><strong>Project Page »</strong></a>
   </p>
 </p>
-
-
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
