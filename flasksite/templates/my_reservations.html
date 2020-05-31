@@ -16,11 +16,13 @@
             </div>
             <div class="col-md-7">
               <h3>{{ reservation[1].name }}</h3>
-              <p>Date Created: {{ reservation[0].date_created.strftime('%Y-%m-%d') }}</p>
-              <p>Reservation Date: {{ reservation[0].date.strftime('%Y-%m-%d') }}</p>
-              <p>Start Time: {{ reservation[0].start_time }}</p>
-              <p>End Time: {{ reservation[0].end_time }}</p>
-              <a class="btn btn-danger" href="#" }>Cancel Reservation</a>
+              <p><b>Date Created:</b> {{ reservation[0].date_created.strftime('%Y-%m-%d') }}</p>
+              <p><b>Reservation Date:</b> {{ reservation[0].date.strftime('%Y-%m-%d') }}</p>
+              <p><b>Start Time:</b> {{ reservation[0].start_time }}</p>
+              <p><b>End Time:</b> {{ reservation[0].end_time }}</p>
+              <form action="{{ url_for('delete_reservation', reservation_id=reservation[0].id) }}" method="POST">
+              <input class="btn btn-danger" type="submit" value="Cancel Reservation">
+              </form>
             </div>
           </div>
         <hr>

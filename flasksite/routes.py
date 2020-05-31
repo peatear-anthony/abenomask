@@ -9,7 +9,6 @@ from flasksite.models import User, Post, Park, Reservation
 from flask_login import login_user, current_user, logout_user, login_required
 
 
-@app.route("/")
 @app.route("/home")
 def home():
     # Get the page from the url
@@ -17,6 +16,8 @@ def home():
     posts = Post.query.order_by(Post.date_posted.desc()).paginate(per_page=2, page=page)
     return render_template('home.html', posts=posts)
 
+
+@app.route("/")
 @app.route("/mainpage")
 @login_required
 def mainpage():
@@ -53,7 +54,7 @@ def make_reservation(park_id):
         reservation = Reservation(
         date=form.date.data,
         start_time=form.start_time.data,
-        end_time=form.start_time.data,
+        end_time=form.end_time.data,
         creator=current_user,
         active=True,
         place=park)
@@ -247,6 +248,17 @@ def delete_post(post_id):
     db.session.commit()
     flash('Your post has been deleted!', 'success')
     return redirect(url_for('home'))
+
+
+@app.route("/reservation/<int:reservation_id>/delete", methods=['POST'])
+@login_required
+def delete_reservation(reservation_id):
+    reservation = Reservation.query.get_or_404(reservation_id)
+    db.session.delete(reservation)
+    db.session.commit()
+    flash('Your reservation has been cancelled!', 'success')
+    return redirect(url_for('my_reservations'))
+
 
 
 @app.route("/user/<string:username>")
