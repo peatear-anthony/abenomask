@@ -31,7 +31,7 @@
 
 * [Getting Started](#getting-started)
   * [Installation](#installation)
-* [How to Use](#howtouse)
+* [Usage](#usage)
 
 
 <!-- GETTING STARTED -->
@@ -51,17 +51,23 @@ npm install npm@latest -g
  
 1. Clone the repo
 ```sh
-git clone https://github.com/github_username/repo.git
+git clone https://github.com/peatear-anthony/abenomask.git
 ```
-2. Install NPM packages
+2. Install  packages
 ```sh
-npm install
+pip install -r requirments.txt
+```
+3. Run App
+```sh
+python run.py
 ```
 
+<!-- USAGE EXAMPLES -->
+## Usage
 
-<!-- ROADMAP -->
-## How to use
-See the [open issues](https://github.com/github_username/repo/issues) for a list of proposed features (and known issues).
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+
+_For more examples, please refer to the [Documentation](https://example.com)_
 
 
 
