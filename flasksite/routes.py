@@ -24,7 +24,7 @@ def mainpage():
     user = User.query.filter_by(username=current_user.username).first_or_404()
     parks = Park.query\
         .filter_by(prefecture=current_user.prefecture)\
-        .order_by(Park.count.desc()).paginate(per_page=5)
+        .order_by(Park.fake_distance).paginate(per_page=5)
 
     return render_template('mainpage.html', parks=parks, user=user)
 

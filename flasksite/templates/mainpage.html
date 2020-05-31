@@ -3,16 +3,14 @@
     <div class="container">
 
       <!-- Page Heading -->
-      <h1 class="my-4">Reservation Page
-        <small>Secondary Text</small>
-      </h1>
+      <h1 class="my-4">Reservation Page</h1>
     {% for park in parks.items %}
               <!-- Each Project -->
           <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-6">
               <a href="#">
-                <img class="img-fluid rounded mb-3 mb-md-0" src="{{ url_for('static', filename=
-      'park_pics/' + park.photo) }}">
+                <img style="max-height:700px" class="img-fluid rounded mb-3 mb-md-0" src="{{ url_for('static', filename=
+      'park_pics/' + park.image_file) }}">
               </a>
             </div>
             <div class="col-md-5">

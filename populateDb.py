@@ -7,8 +7,6 @@ from flasksite import db, app
 from flasksite.models import User, Park
 from PIL import Image
 
-
-
 if __name__ ==  '__main__':
     # Create New DB
     db.create_all()
@@ -16,8 +14,6 @@ if __name__ ==  '__main__':
     # Load data from csv
     df_park = pd.read_csv('data/park1.csv')
     for index, row in df_park.iterrows():
-        image_file = row['image_file'] if row['image_file'] else 'default.jpg'
-        print(image_file)
         park = Park(
             name=row['name'],
             prefecture=row['prefecture'],
@@ -26,7 +22,7 @@ if __name__ ==  '__main__':
             lon=row['lon'],
             capacity=row['capacity'],
             fake_distance =row['fake_distance'],
-            image_file =image_file,
+            image_file =row['image_file'],
             count = randrange(1000)
             )
 

@@ -1,8 +1,17 @@
 {% extends "layout.html" %}
 {% block content %}
-        <h1> {{park.name}} </h1>>
-        
+<div class = 'row'>
+    <div class='col-md-4'>
+        <h2 class="article-title text-center"> {{park.name}}</legend>
+        <img style="max-height:700px" class="img-fluid rounded mb-3 mb-md-0" src="{{ url_for('static', filename='park_pics/' + park.image_file) }}"> 
+        {% if park.count > park.capacity %}
+            <h4 class="article-content" style="color:red">Capacity: {{ park.count }} / {{ park.capacity }}  </h4>
+        {% else %}
+            <h4 class="article-content" style="color:green">Capacity: {{ park.count }} / {{ park.capacity }}  </h4>
+        {% endif %}       
+    </div>
 
+    <div class='col-md-8'>
         <form method="POST" action="">
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
@@ -56,6 +65,7 @@
             </div>
         </form>
     </div>
-
     </div>
+    </div>
+</div>
 {% endblock content %}
