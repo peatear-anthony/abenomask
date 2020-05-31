@@ -1,3 +1,10 @@
+<style>
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+</style>
+
 {% extends "layout.html" %}
 {% block content %}
     <div class="container">
@@ -14,14 +21,13 @@
               </a>
             </div>
             <div class="col-md-5">
-              <h3>{{ park.name }}</h3>
-              <h4><p>{{ park.prefecture }}</p></h4>
-              <p>Distance From Home:To Do</p>
-              <p>Max Time Reservation: 2 Hrs </p>
-              {% if park.count > park.capacity %}
-                <p style="color:red">{{ park.count }} / {{ park.capacity }}  </p>
+              <h2 class="my-4">{{ park.name }}</h2>
+              <h4><p><b>Prefecture:</b> {{ park.prefecture }}</p></h4>
+              <h4 class="article-content" ><b>Area:</b> {{park.area}} km<sup>2</sup></h4>
+              {% if park.count >= park.capacity %}
+                <h4 class="article-content" style="color:red"><b>Capacity:</b> {{ park.count }} / {{ park.capacity }}</h4>
               {% else %}
-                <p style="color:green">{{ park.count }} / {{ park.capacity }}  </p>
+                <h4 class="article-content" style="color:green"><b>Capacity:</b> {{ park.count }} / {{ park.capacity }}  </h4>
               {% endif %}
               <a class="btn btn-primary" href="{{ url_for('make_reservation', park_id=park.id) }}" }>Make Reservation</a>
             </div>
