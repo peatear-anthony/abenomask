@@ -1,4 +1,4 @@
-prefecture,name,area,lat,lon,capacity,photo,fake_distance
+prefecture,name,area,lat,lon,capacity,image_file,fake_distance
 Tokyo,Ueno Park,0.5385,35.7155,1397741,269,Ueno.jpg,1
 Tokyo,Yoyogi Park,0.5405,35.6716,139.6967,270,Yoyogi.jpg,2
 Tokyo,Wadabori Park,0.1999,35.6847,139.6409,99,Wadabori.jpg,3

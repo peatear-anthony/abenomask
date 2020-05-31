@@ -7,12 +7,12 @@
         <small>Secondary Text</small>
       </h1>
     {% for park in parks.items %}
-
               <!-- Each Project -->
           <div class="row">
             <div class="col-md-7">
               <a href="#">
-                <img class="img-fluid rounded mb-3 mb-md-0" src="#">
+                <img class="img-fluid rounded mb-3 mb-md-0" src="{{ url_for('static', filename=
+      'park_pics/' + park.photo) }}">
               </a>
             </div>
             <div class="col-md-5">

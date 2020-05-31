@@ -41,8 +41,6 @@ def my_reservations():
     return render_template('my_reservations.html', parks=parks, user=user)
 
 
-
-
 @app.route("/make_reservation/<int:park_id>", methods=['GET', 'POST'])
 @login_required
 def make_reservation(park_id):

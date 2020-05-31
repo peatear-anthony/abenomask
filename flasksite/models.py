@@ -47,6 +47,8 @@ class Park(db.Model):
     lon = db.Column(db.Float, nullable=False)
     capacity = db.Column(db.Integer, nullable=False, default=0)
     count = db.Column(db.Integer, nullable=False, default=0)
+    image_file = db.Column(db.String(100), unique=False, nullable=False, default="default.jpg")
+    fake_distance = db.Column(db.Integer, nullable=False, default=69)
     people = db.relationship('User', backref='location', lazy=True)
     reservations = db.relationship('Reservation', backref='place', lazy=True)
 

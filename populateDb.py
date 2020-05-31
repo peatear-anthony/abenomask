@@ -1,9 +1,11 @@
 import os
 import csv
+import secrets
 import pandas as pd
 from random import randrange
-from flasksite import db
+from flasksite import db, app
 from flasksite.models import User, Park
+from PIL import Image
 
 
 
@@ -12,8 +14,10 @@ if __name__ ==  '__main__':
     db.create_all()
 
     # Load data from csv
-    df_park = pd.read_csv('data/park.csv')
+    df_park = pd.read_csv('data/park1.csv')
     for index, row in df_park.iterrows():
+        image_file = row['image_file'] if row['image_file'] else 'default.jpg'
+        print(image_file)
         park = Park(
             name=row['name'],
             prefecture=row['prefecture'],
@@ -21,8 +25,11 @@ if __name__ ==  '__main__':
             lat=row['lat'],
             lon=row['lon'],
             capacity=row['capacity'],
-            count = randrange(10000)
+            fake_distance =row['fake_distance'],
+            image_file =image_file,
+            count = randrange(1000)
             )
+
         db.session.add(park)
         db.session.commit()
         
