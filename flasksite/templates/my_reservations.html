@@ -1,61 +1,30 @@
 {% extends "layout.html" %}
 {% block content %}
-        <h1> {{park.name}} </h1>
+<div class="container">
+    <!-- Page Heading -->
+    <h1 class="my-4">My Reservations</h1>
 
-
-        <form method="POST" action="">
-            {{ form.hidden_tag() }}
-            <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Make A Reservation</legend>                
-                <div class="form-group">
-                    {{ form.date.label(class="form-control-label") }}
-                    {% if form.date.errors %}
-                        {{ form.date(class="form-control form-control-lg is-invalid") }}
-                        <div class="invalid-feedback">
-                            {% for error in form.date.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        {{ form.date(class="form-control form-control-lg") }}
-                    {% endif %}
-                </div>
-
-                <div class="form-group">
-                    {{ form.start_time.label(class="form-control-label") }}
-
-                    {% if form.start_time.errors %}
-                        {{ form.start_time(class="form-control form-control-lg is-invalid") }}
-                        <div class="invalid-feedback">
-                            {% for error in form.start_time.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        {{ form.start_time(class="form-control form-control-lg") }}
-                    {% endif %}
-                </div>
-
-                <div class="form-group">
-                    {{ form.end_time.label(class="form-control-label") }}
-
-                    {% if form.end_time.errors %}
-                        {{ form.end_time(class="form-control form-control-lg is-invalid") }}
-                        <div class="invalid-feedback">
-                            {% for error in form.end_time.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        {{ form.end_time(class="form-control form-control-lg") }}
-                    {% endif %}
-                </div>
-
-            <div class="form-group">
-                {{ form.submit(class="btn btn-outline-info") }}
+    {% for reservation in reservations %}
+    <!-- Each Reservation -->
+    <div class="row">
+            <div class="col-md-4">
+              <a href="#">
+                <img style="max-height:700px" class="img-fluid rounded mb-3 mb-md-0" src="{{ url_for('static', filename=
+      'park_pics/' + reservation[1].image_file) }}">
+              </a>
             </div>
-        </form>
-    </div>
+            <div class="col-md-8">
+              <h3>{{ reservation[1].name }}</h3>
+              <h4><p>Date Created: {{ reservation[0].date_created.strftime('%Y-%m-%d') }}</p></h4>
+              <p>Reservation Date: {{ reservation[0].date.strftime('%Y-%m-%d') }}</p>
+              <p>Start Time: {{ reservation[0].start_time }}</p>
+              <p>End Time: {{ reservation[0].end_time }}</p>
+              <a class="btn btn-primary" href="#" }>Cancel Reservation</a>
+            </div>
+          </div>
 
-    </div>
+    {% endfor %}
 {% endblock content %}
+
+
+

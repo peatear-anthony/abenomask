@@ -33,12 +33,13 @@ def mainpage():
 @login_required
 def my_reservations():
     # Get User and Park Info
-    user = User.query.filter_by(username=current_user.username).first_or_404()
-    parks = Park.query\
-        .filter_by(prefecture=current_user.prefecture)\
-        .order_by(Park.count.desc()).paginate(per_page=5)
+    reservations = db.session\
+    .query(Reservation, Park)\
+    .outerjoin(Park, Reservation.park_id == Park.id)\
+    .filter(Reservation.user_id == current_user.id)\
+    .order_by(Reservation.date.desc())
 
-    return render_template('my_reservations.html', parks=parks, user=user)
+    return render_template('my_reservations.html', reservations=reservations)
 
 
 @app.route("/make_reservation/<int:park_id>", methods=['GET', 'POST'])
