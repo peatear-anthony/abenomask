@@ -1,0 +1,134 @@
+prefecture,name,area,lat,lon,capacity,photo,fake_distance
+Tokyo,Ueno Park,0.5385,35.7155,1397741,269,Ueno.jpg,1
+Tokyo,Yoyogi Park,0.5405,35.6716,139.6967,270,Yoyogi.jpg,2
+Tokyo,Wadabori Park,0.1999,35.6847,139.6409,99,Wadabori.jpg,3
+Tokyo,Rinshinomori Park,0.1208,35.625,139.7033,60,Rinshinomori.jpg,4
+Tokyo,Toyama Park,0.1868,35.7069,139.706,93,Toyama.jpg,5
+Tokyo,Koganei Park,0.7991,35.7166,139.5177,399,,6
+Tokyo,Hamarikyu Gardens,0.2516,35.6607,139.7626,125,,7
+Tokyo,Komazawa Olympic Park,0.4136,35.6258,139.6605,206,,8
+Tokyo,Ogunohara Park,0.06186,3.4553,139.4637,30,,9
+Tokyo,Shakujii Park,0.2014,35.7384,139.5981,100,,10
+Tokyo,Koishikawa Kourakuen Gardens,0.07085,35.7055,139.7493,35,,11
+Tokyo,Zenpukuji Park,0.07862,35.7147,139.5193,39,,12
+Tokyo,Hikarigaoka Park,0.6078,35.7638,139.6289,303,,13
+Tokyo,Yumenoshima Park,0.4322,35.6511,139.8278,216,,14
+Tokyo,Rikugien Gardens,0.08781,35.7331,139.7465,43,,15
+Tokyo,Shiba Park,0.65,35.6549,139.748,325,,16
+Tokyo,Komaba Park,0.0404,35.6619,139.6802,20,,17
+Tokyo,Shinjuku Central Park,0.88065,35.6898,139.6897,440,,18
+Tokyo,Hanegi Park,0.07965,35.6588,139.6548,39,,19
+Tokyo,Shinjuku Gyoen National Garden,0.583,35.6852,139.7101,291,,20
+Hokkaido,Moerenuma Park,1.888,43.1225,141.4308,944,Moerenuma.jpg,1
+Hokkaido,Nakajima Park,0.236,43.0445,141.3544,118,Nakajima.jpg,2
+Hokkaido,Onuma Quasi-National Park,90.83,41.9839,140.6729,45415,Onuma.jpg,3
+Hokkaido,Takino Suzuran Hillide Park,3.957,42.9115,141.3802,1978,Kokueitakino.jpg,4
+Hokkaido,Kamuinomori Park,0.1863,43.746,142.3183,93,Kamuinomori.jpg,5
+Hokkaido,Sapporo Odori Park,0.078,43.0597,141.3465,39,,6
+Hokkaido,Yurigahara Park,0.254,43.1289,141.365,127,,7
+Hokkaido,Maruyama Park,0.688,43.0532,141.3076,344,,8
+Hokkaido,Goryokaku Park,0.252,41.7969,140.7568,126,,9
+Hokkaido,Yumenomori Park,0.542,43.5687,144.9566,271,,10
+Okinawa,Nakagusuku Park,0.988,26.2883,127.7927,494,kenei-nangusuku-park8.jpg,1
+Okinawa,Okinawa Comprehensive athletic Park,0.704,26.3097,12.8233,352,4c2d37e75c6b6bb1c217f75453b3c23a.jpg,2
+Okinawa,Urasoe Park,0.374,26.2541,127.7252,187,100_image_0013_B.jpg,3
+Okinawa,Toyosaki Rainbow Park,0.202,26.1616,127.6519,101,zzzzz_zzzzz_744_496_keep_a2f39dd0abb65ec4ea564bdf2bc417752802c147.jfif,4
+Okinawa,Yaeshima Park,0.057,26.3448,127.8013,28,oki1602_165.jpg,5
+Okinawa,Yuinhama Park,0.023146,26.6795,128.0988,11,,6
+Osaka,Osaka Castle Park,1.056,34.6867,135.526,528,Osakajyo.jpg,1
+Osaka,Kyuhoji Green Space,0.384,34.6311,135.5783,192,Kyuhouji.jpg,2
+Osaka,Tonboike Park,0.53,34.4439,135.3844,265,Tombo.jpg,3
+Osaka,Tsurumi Ryokuchi Park,1.226,34.718,135.5783,613,Tsurumi.jpg,4
+Osaka,Hanazono Central Park,0.363,34.6693,135.6291,181,Hanazono.jpg,5
+Osaka,Hamadera Park,0.751,34.5397,135.4392,375,,6
+Osaka,Hiraoka Park,0.438,34.6741,135.6545,219,,7
+Osaka,Fukakitaryokuchi,0.41,34.764,135.6289,205,,8
+Osaka,Hattori Ryokuchi,1.263,34.7768,135.4851,631,,9
+Osaka,Oizumi Ryokuchi Park,0.1015,34.5649,135.5275,50,,10
+Osaka,Nishikori Park,0.657,34.4828,135.5729,328,,11
+Osaka,Daisen Park,0.81,34.5585,135.4828,405,,12
+Osaka,Ogimachi Park,0.0732,34.7039,135.5091,36,,13
+Kanagawa,Yamashita Park,0.07412,35.4458,139.6496,37,select-yamashitapark.jpg,1
+Kanagawa,Shikinomori Park,0.453,35.5025,139.5356,226,shikinomori-park14.jpg,2
+Kanagawa,Kanagawa Kenritsu Sagamihara Park,0.26,35.5312,139.3878,130,373272.jpg,3
+Kanagawa,Mitsuike Park,0.297,35.5236,139.6618,148,135708_2.jpg,4
+Kanagawa,Kanagawa Kenritsu Sagamisansen Park,0.119,35.4593,139.3807,59,20190922125658.jpg,5
+Kanagawa,Ikuta Ryokuchi Park,1.174,35.6084,139.5607,587,,6
+Kanagawa,Kodomo Shizen Koen,1.4815,35.4502,139.5359,740,,7
+Kanagawa,Yokohama Park,0.06379,35.4441,139.6406,31,,8
+Kanagawa,Bousaino Oka Park,0.09384,35.4347,139.3439,46,,9
+Kanagawa,Observatory of Harbor viewing hill park,0.05776,35.4407,139.6546,28,,10
+Aomori,Kikugaokaundo Park,0.112,40.7969,140.4415,56,,69
+Aomori,Hirosaki Park,0.0765,40.6077,140.4644,38,,69
+Aomori,Aoimori Park,0.018,40.8243,140.7418,9,,69
+Iwate,Morioka Casle Site Park,0.092,39.7006,141.1513,46,,69
+Iwate,Takamatsu Park,0.105,39.7253,141.1464,52,,69
+Iwate,Fureainooka Park,0.02185,39.1288,141.1978,10,,69
+Miyagi,Nanakita Park,0.2204,38.319,140.8798,110,,69
+Miyagi,Kotodai Park,0.02689,38.2669,140.8719,13,,69
+Miyagi,Michinoku Park,2.875,38.1853,140.6719,1437,,69
+Akita,Akita Prefectural Koizumigata Park,0.637,39.8142,140.0715,318,,69
+Akita,Senshu Park,0.1629,39.7222,140.1238,81,,69
+Akita,Hitotsumori Park,0.7008,39.6995,140.1419,350,,69
+Yamagata,Kajo Park,0.359,38.2547,140.3282,179,,69
+Yamagata,Nishi Park,0.156,38.2444,140.2823,78,,69
+Yamagata,Nishizao Park,0.725,38.2047,140.3545,362,,69
+Fukushima,Kaiseizan Park,0.303,37.398,140.3583,151,,69
+Fukushima,Nanko Park,0.444,37.1103,140.2165,222,,69
+Fukushima,Misaki Park,0.7,36.9382,140.9203,350,,69
+Ibaraki,Tsuchiura City Kasumigaura Comprehensive Park,0.32,36.0634,140.2201,160,,69
+Ibaraki,Kashimanada Seaside Park,0.2,36.1508,140.5777,100,,69
+Ibaraki,Kasama Geijutsunomori Park,0.546,36.372,140.2663,273,,69
+Tochigi,Tochigi Wanpaku Park,0.372,36.4613,139.8077,186,,69
+Tochigi,Hachimanyama Park,0.118,36.5707,139.8851,59,,69
+Tochigi,Utsunomiya Castle Ruins Park,0.037,36.5547,139.885,18,,69
+Gunma,Maebashi Park,0.185,36.3949,139.0603,92,,69
+Gunma,Isesaki Shiminnomori Park,0.139,36.3118,139.1965,69,,69
+Gunma,Gunma-no-mori,0.262,36.2979,139.0816,131,,69
+Saitama,Saiko Doman Green Park,0.667,35.493,139.3748,333,,69
+Saitama,Saitama Prefectural Misato Park,0.169,35.7853,139.873,84,,69
+Saitama,Tokorozawa Aviation Memorial Park,0.502,35.7976,139.4746,251,,69
+Chiba,Funabashi Andersen Park,0.304,35.7599,140.0615,152,,69
+Nigata,Echigo Hillside Park,2.984,37.4179,138.7457,1492,,69
+Toyama,Kansui Park,0.097,36.7094,137.2125,48,,69
+Ishikawa,Ishikawaken Forest Park,11.5,36.6904,136.7626,5750,,69
+Fukui,Nishiyama Park,0.56,35.9503,136.1819,280,,69
+Yamanashi,Fuefukigawa Fruit Park,0.322,35.7024,138.6649,161,,69
+Nagano,Alps Azumino National Government Park,3.53,36.3152,137.8433,1765,,69
+Gifu,Gifu Park,0.203,35.4347,136.7744,101,,69
+Sizuoka,Fujinokuni Tagonomiya Minato Park,0.076,35.658677,139.745451,38,,69
+Aichi,Aichi Health Village Park,0.515,34.9979,136.9468,257,,69
+Mie,Nanbukyuryo Park,0.292,34.9447,136.5846,146,,69
+Shiga,Biwako kodomo-no kuni,0.077,35.3198,136.0752,38,,69
+Kagoshima,Kinkouwan Park,0.0052,31.46056,130.5075,2,svwWVGjnMlW0EA3Lzda1br44BWuLGZRfCaPQnpvb__1542_1029.jpeg,1
+Kagoshima,Kagoshima Prefectural Yoshio Park,0.309,31.63334,139.5947228,154,E57D83510CEAC748BE04F1065B309632.jpg,2
+Kagoshima,Sakurajima Nature Dinasaur Park,0.05,31.59347,31.5934668,25,P9180199-1024x768.jpg,3
+Kagoshima,Ishibashi Memorial Park,0.018,31.60439,130.567552,9,8BAFEDF9A62A7D1F1189D020D300EEF4.jpg,4
+Kagoshima,Kagoshima City Zoological Park,0.314,31.46285,130.501618,157,IMG_2052-1024x683.jpg,5
+Kagoshima,Kagoshima Fureai Sports Land,0.3996,31.54958,130.489618,199,,6
+Kagoshima,Fukiagehama Seaside Park,0.11,31.4368,130.282883,55,,7
+Kagoshima,Shiroyama Park,0.158594,31.6166,130.547205,79,,8
+Miyazaki,Heiwadai Park,0.688,31.96139,131.416952,344,,69
+Miyazaki,Bokusui Park,0.12,32.35988,32.359882,60,,69
+Miyazaki,Kannonike Park,0.063,31.82668,131.138305,31,,69
+Oita,Beppu Park,0.0273,33.28169,131.491194,13,,69
+Oita,Nanase River Nature Park,0.006,33.18291,33.182912,3,,69
+Oita,Yokozuka Park,0.016829,33.24052,131.738666,8,,69
+Kumamoto,Suizenji jojuen Park,0.073,32.79109,32.791092,36,,69
+Kumamoto,Musashizuka Park,0.0001852,32.845,130.764946,0,,69
+Nagasaki,Nagasaki Park,0.029,32.75513,129.881146,14,,69
+Saga,Higatayoka Park,0.000851,33.17417,130.27248,0,,69
+Fukuoka,Ohori,0.398,33.58689,130.376344,199,,69
+Kochi,Hitsuzan Park,0.39,33.54727,133.533743,195,,69
+Ehime,Matsuyama Central Park,0.4525,33.81082,132.744424,226,,69
+Kagawa,Kinbuchi Forest Park,0.93,34.24109,134.108659,465,,69
+Tokushima,Tokushima Central Park,0.200262,34.07539,134.554447,100,,69
+Yamaguchi,Yamaguchi Kirara Haku Memorial Park,1.303,34.00692,131.37218,651,,69
+Hiroshima,Hiroshima Peace Memorial Park,0.1221,34.39272,132.452361,61,,69
+Okayama,Ujo Park,0.045,34.66476,133.935918,22,,69
+Shimane,Hamayama Park,0.549,35.38347,132.707556,274,,69
+Tottori,Utubuki Park,0.485,35.42992,133.821972,242,,69
+Wakayama,Saginose Park,0.037,34.25925,135.276409,18,,69
+Nara,Nara Park,5.02,34.68516,135.843011,2510,,69
+Hyogo,Hyogojima Park,0.0657298,35.61171,139.62465,32,,69
+Kyoto,Umekoji Park,0.105,34.98751,135.744348,52,,69
