@@ -19,6 +19,9 @@ class RegistrationForm(FlaskForm):
     postal_code = StringField('Postal Code',
                             validators=[DataRequired()])
 
+    prefecture = StringField('Prefecture',
+                            validators=[DataRequired()])
+
     my_number = StringField('My Number',
                             validators=[Length(min=1, max=12)])
 
@@ -73,6 +76,9 @@ class UpdateAccountForm(FlaskForm):
 
     my_number = StringField('My Number',
                             validators=[Length(min=1, max=12)])
+    
+    prefecture = StringField('Prefecture',
+                            validators=[DataRequired()])
 
     email = StringField('Email',
                         validators=[Email()])

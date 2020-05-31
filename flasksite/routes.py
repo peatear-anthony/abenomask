@@ -28,15 +28,16 @@ def mainpage():
     return render_template('mainpage.html', parks=parks, user=user)
 
 
-    '''
-    # Get first user or retrun a 404 error if None
-    user = User.query.filter_by(username=username).first_or_404()
+@app.route("/my_reservations")
+@login_required
+def my_reservations():
+    # Get User and Park Info
+    user = User.query.filter_by(username=current_user.username).first_or_404()
+    parks = Park.query\
+        .filter_by(prefecture=current_user.prefecture)\
+        .order_by(Park.count.desc()).paginate(per_page=5)
 
-    posts = Post.query.filter_by(author=user)\
-        .order_by(Post.date_posted.desc())\
-        .paginate(per_page=2, page=page)
-    '''
-
+    return render_template('my_reservations.html', parks=parks, user=user)
 
 
 @app.route("/about")
@@ -58,6 +59,7 @@ def register():
             first_name=form.first_name.data,
             last_name=form.last_name.data,
             postal_code=form.postal_code.data,
+            prefecture=form.prefecture.data,
             my_number=form.my_number.data,
             password=form.password.data,
             email=form.email.data)
@@ -121,6 +123,7 @@ def account():
             picture_file = save_picture(form.picture.data)
             current_user.image_file =  picture_file
         current_user.username = form.username.data
+        current_user.prefecture = form.prefecture.data
         current_user.email = form.email.data
         current_user.first_name = form.first_name.data
         current_user.last_name = form.last_name.data
@@ -135,6 +138,7 @@ def account():
         form.last_name.data = current_user.last_name
         form.my_number.data = current_user.my_number
         form.postal_code.data = current_user.postal_code
+        form.prefecture.data = current_user.prefecture
     image_file = url_for('static', filename='profile_pics/' + current_user.image_file)
     return render_template('account.html', title='Account', 
         image_file=image_file, form=form)

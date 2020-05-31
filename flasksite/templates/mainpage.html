@@ -1,9 +1,34 @@
 {% extends "layout.html" %}
 {% block content %}
-    {{ user.prefecture}}
+    <div class="container">
+
+      <!-- Page Heading -->
+      <h1 class="my-4">Reservation Page
+        <small>Secondary Text</small>
+      </h1>
     {% for park in parks.items %}
-        <h1>{{ park.name }}</h1>>
-        <p>{{ park.prefecture }}</p>>
-        <p>{{ park.count }}  {{ park.capacity }}</p>>
+
+              <!-- Each Project -->
+          <div class="row">
+            <div class="col-md-7">
+              <a href="#">
+                <img class="img-fluid rounded mb-3 mb-md-0" src="#">
+              </a>
+            </div>
+            <div class="col-md-5">
+              <h3>{{ park.name }}</h3>
+              <h4><p>{{ park.prefecture }}</p></h4>
+              <p>Distance From Home:To Do</p>
+              <p>Max Time Reservation: 2 Hrs </p>
+              {% if park.count > park.capacity %}
+                <p style="color:red">{{ park.count }} / {{ park.capacity }}  </p>
+              {% else %}
+                <p style="color:green">{{ park.count }} / {{ park.capacity }}  </p>
+              {% endif %}
+              <a class="btn btn-primary" href="#">Make Reservation</a>
+            </div>
+          </div>
+          <!-- /.row -->
+          <hr>
     {% endfor %}
 {% endblock content %}
