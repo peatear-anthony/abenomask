@@ -23,7 +23,7 @@ if __name__ ==  '__main__':
             capacity=row['capacity'],
             fake_distance =row['fake_distance'],
             image_file =row['image_file'],
-            count = randrange(200)
+            count = randrange(175)
             )
 
         db.session.add(park)
