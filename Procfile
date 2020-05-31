@@ -1,1 +1,1 @@
-web: gunicorn delploy:app
+web: gunicorn flasksite:app
