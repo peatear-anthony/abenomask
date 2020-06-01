@@ -23,6 +23,8 @@
     App created for the Covid-19-SpaceApps Competition. 
     <br />
     <a href="https://covid19.spaceappschallenge.org/challenges/covid-challenges/isolation-solution/teams/abenomask/project"><strong>Project Page »</strong></a>
+  <br />
+  <a href="https://gonokami.herokuapp.com/"><strong>Website »</strong></a>
   </p>
 </p>
 
