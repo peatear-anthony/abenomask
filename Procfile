@@ -1,1 +1,1 @@
-web: gunicorn run:flasksite
+web: gunicorn flasksite.wsgi
