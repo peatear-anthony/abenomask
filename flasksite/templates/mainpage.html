@@ -29,7 +29,7 @@ sup {
               {% else %}
                 <h4 class="article-content" style="color:green"><b>Capacity:</b> {{ park.count }} / {{ park.capacity }}  </h4>
               {% endif %}
-              <a class="btn btn-primary" href="{{ url_for('make_reservation', park_id=park.id) }}" }>Make Reservation</a>
+              <a class="btn btn-primary" href="{{ url_for('reservations.make_reservation', park_id=park.id) }}" }>Make Reservation</a>
             </div>
           </div>
           <!-- /.row -->
