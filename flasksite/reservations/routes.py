@@ -1,6 +1,4 @@
 from flask import Blueprint
-
-reservations = Blueprint('reservations', __name__)
 from flask import (render_template, url_for, flash,
                    redirect, request, abort, Blueprint)
 from flask_login import current_user, login_required
@@ -9,6 +7,7 @@ from flasksite.models import Park, User, Reservation
 from flasksite.reservations.forms import MakeReservationForm
 import datetime
 
+reservations = Blueprint('reservations', __name__)
 
 @reservations.route("/my_reservations")
 @login_required
